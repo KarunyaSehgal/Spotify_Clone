@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+body{
+    background-color: aquamarine;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Quicksand',sans-serif;
+}
+
+/*
+Makes "Home" & "About" alignment
+*/
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 150px;
+    background-color: black;
+    color: antiquewhite;
+}
+
+nav ul li{
+    padding: 0 15.67px;
+}
+.company img{
+    width: 150px;
+    border-radius: 100%; 
+    padding: 0 5px;
+}
+
+/* 
+Creating flex-box for "Spotify"
+*/
+
+.company {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.container{
+    min-height: 80vh;
+    background-color: black;
+    color: white;
+    font-family: 'Fasthand', sans-serif;
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 70vh;
+    background-image: url('Sufi.png');
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 115px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.icons{
+    margin-top: 15px; 
+}
+.icons i{
+    cursor: pointer;
+}
+
+/* Makes the icons a form of start stop button */
+
+#myProgressBar{
+    width: 50vw; 
+    text-align: center;
+    /* 
+    If it would have been a container and we wanted to align the content inside then it would have worked.
+    Here text align centre wont work instead we would have make "lowerstrip" a flexbox 
+    */
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.songItem{
+    height: 65px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.songItem img{
+    width: 45px;
+    margin: 0 23px;
+    border-radius: 30px;
+    /* Image will not become more circular as the margin from top and bottom need to be 0 */
+    /* margin first value is margin from top and bottom and next value is from right left  */
+}
+
+.timestamp{
+    margin: 0 25px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songTemp{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Fasthand', sans-serif;
+}
+
+.songTemp img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: blue;
+    }
+  }
